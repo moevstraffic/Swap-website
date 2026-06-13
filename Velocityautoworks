@@ -1,146 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Velocity Auto Works | Dallas TX HEMI & Hellcat Swaps</title>
-<link rel="stylesheet" href="styles.css">
-</head>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: white;
+}
 
-<body>
+header {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
 
-<header>
-  <div class="logo">VELOCITY AUTO WORKS</div>
-  <div class="tagline">HEMI & HELLCAT SWAP SPECIALISTS • DALLAS, TX</div>
-</header>
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: red;
+}
 
-<nav>
-  <a href="#services">Services</a>
-  <a href="#quote">Quote</a>
-  <a href="#booking">Book</a>
-  <a href="#financing">Financing</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
-</nav>
+.tagline {
+  font-size: 12px;
+  color: #aaa;
+}
 
-<section class="hero">
-  <h1>BUILD YOUR DREAM MOPAR</h1>
-  <p>5.7 • 6.4 • 6.2 HELLCAT SWAPS DONE RIGHT</p>
-  <a href="#booking" class="btn">Book Appointment</a>
-</section>
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #111;
+  padding: 10px;
+  flex-wrap: wrap;
+}
 
-<!-- SERVICES -->
-<section id="services">
-  <h2>Services</h2>
-  <div class="grid">
-    <div class="card">Charger Swaps</div>
-    <div class="card">Challenger Swaps</div>
-    <div class="card">Chrysler 300 Swaps</div>
-    <div class="card">5.7 HEMI Conversions</div>
-    <div class="card">6.4 392 Builds</div>
-    <div class="card">6.2 Hellcat Builds</div>
-    <div class="card">Wiring & Programming</div>
-    <div class="card">Turn-Key Builds</div>
-  </div>
-</section>
+nav a {
+  color: white;
+  text-decoration: none;
+}
 
-<!-- QUOTE CALCULATOR -->
-<section id="quote">
-  <h2>Instant Build Quote</h2>
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(black, #1a1a1a);
+}
 
-  <div class="quote-box">
+.hero h1 {
+  font-size: 40px;
+}
 
-    <label>Vehicle</label>
-    <select id="vehicle">
-      <option>Charger</option>
-      <option>Challenger</option>
-      <option>Chrysler 300</option>
-    </select>
+.btn {
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
 
-    <label>Engine Swap</label>
-    <select id="engine">
-      <option value="5.7">5.7 HEMI</option>
-      <option value="6.4">6.4 392</option>
-      <option value="6.2">6.2 Hellcat</option>
-    </select>
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
 
-    <label>Parts Option</label>
-    <select id="parts">
-      <option value="customer">I supply my own parts</option>
-      <option value="shop">Shop supplies donor vehicle</option>
-    </select>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
 
-    <button onclick="calculateQuote()">Calculate Quote</button>
+.card, .img {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+}
 
-    <h3 id="result">Estimated Price: --</h3>
+.quote-box {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  </div>
-</section>
+input, select, textarea {
+  padding: 10px;
+  background: #222;
+  border: none;
+  color: white;
+}
 
-<!-- BOOKING -->
-<section id="booking">
-  <h2>Book Appointment</h2>
+button {
+  padding: 12px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
-  <form>
-    <input type="text" placeholder="Full Name" required>
-    <input type="tel" placeholder="Phone Number" required>
-    <input type="email" placeholder="Email" required>
-
-    <select>
-      <option>Charger</option>
-      <option>Challenger</option>
-      <option>Chrysler 300</option>
-    </select>
-
-    <select>
-      <option>5.7 HEMI</option>
-      <option>6.4 392</option>
-      <option>6.2 Hellcat</option>
-    </select>
-
-    <textarea placeholder="Project Details"></textarea>
-
-    <button type="submit">Submit Request</button>
-  </form>
-</section>
-
-<!-- FINANCING -->
-<section id="financing">
-  <h2>Financing Available</h2>
-  <p>We offer flexible financing options for complete builds and swap packages.</p>
-
-  <div class="finance-grid">
-    <div class="card">Affirm</div>
-    <div class="card">Snap Finance</div>
-    <div class="card">LightStream</div>
-    <div class="card">Local Auto Financing</div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-  <h2>Build Gallery</h2>
-
-  <div class="grid">
-    <div class="img">Charger Build</div>
-    <div class="img">Challenger Hellcat</div>
-    <div class="img">Chrysler 300 Swap</div>
-    <div class="img">Engine Bay</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>📍 Dallas, Texas</p>
-  <p>📞 903-240-9874</p>
-  <p>🕒 24/7 Availability</p>
-</section>
-
-<footer>
-  <p>© 2026 Velocity Auto Works | Dallas, TX</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
